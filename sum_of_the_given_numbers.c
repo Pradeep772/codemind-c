@@ -1,13 +1,19 @@
 #include<stdio.h>
 int main()
 {
-    int n,i,n1,n2;
+    int i,n,a[100],b[100],c[100];
     scanf("%d",&n);
-    for(i=1;i<=n;i++)
+    for(i=0;i<n;i++)
     {
-        scanf("%d%d",&n1,&n2);
-        printf("%d
-",n1+n2);
+        scanf("%d%d",&a[i],&b[i]);
     }
-    return 0;
+    for(i=0;i<n;i++)
+    {
+        c[i]=a[i]+b[i];
+    }
+    for(i=0;i<n;i++)
+    {
+        printf("%d
+",c[i]);
+    }
 }
