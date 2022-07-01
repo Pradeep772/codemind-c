@@ -1,24 +1,23 @@
 #include<stdio.h>
-int fun(int n)
-{
-    if(n==1)
-    return 1;
-    else if(n%2==0)
-    return fun(n/2);
-    else if(n%3==0)
-    return fun(n/3);
-    else if(n%5==0)
-    return fun(n/5);
-    return 0;
-}
 int main()
 {
-    int n;
+    int n,c=0;
     scanf("%d",&n);
-    int p=fun(n);
-    if(p==1)
+    while(n!=1)
+    {
+        if(n%2==0)
+        n=n/2;
+        else if(n%3==0)
+        n=n/3;
+        else if(n%5==0)
+        n=n/5;
+        else
+        {
+            printf("Not Ugly Number");
+            c=1;
+            break;
+        }
+    }
+    if(c==0)
     printf("Ugly Number");
-    else
-    printf("Not Ugly Number");
-    return 0;
 }
